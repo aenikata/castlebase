@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CastleBase/web.config" ctype="Workbench">
+    <Files>
+      <File FileName="CastleBase/web.config" Line="24" Column="75" />
+      <File FileName="CastleBase/models/setting.cs" Line="6" Column="2" />
+      <File FileName="CastleBase/controllers/SettingController.cs" Line="1" Column="1" />
+      <File FileName="CastleBase/controllers/HomeController.cs" Line="39" Column="22" />
+      <File FileName="CastleBase/views/home/addedsetting.vm" Line="1" Column="25" />
+      <File FileName="CastleBase/Global.asax.cs" Line="5" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="CastleBase" expanded="True">
+            <Node name="controllers" expanded="True" />
+            <Node name="models" expanded="True" />
+            <Node name="views" expanded="True">
+              <Node name="home" expanded="True" />
+            </Node>
+            <Node name="web.config" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

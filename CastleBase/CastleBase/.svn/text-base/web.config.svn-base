@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+Web.config file for CastleBase.
+
+The settings that can be used in this file are documented at 
+http://www.mono-project.com/Config_system.web and 
+http://msdn2.microsoft.com/en-us/library/b5ysx397.aspx
+-->
+<configuration>
+  <configSections>
+    <section name="monorail" type="Castle.MonoRail.Framework.Configuration.MonoRailSectionHandler, Castle.MonoRail.Framework" />
+    <section name="activerecord" type="Castle.ActiveRecord.Framework.Config.ActiveRecordSectionHandler, Castle.ActiveRecord" />
+  </configSections>
+  <monorail>
+    <controllers>
+      <assembly>CastleBase</assembly>
+    </controllers>
+    <viewEngines viewPathRoot="views">
+      <add type="Castle.MonoRail.Framework.Views.NVelocity.NVelocityViewEngine, Castle.MonoRail.Framework.Views.NVelocity" />
+    </viewEngines>
+  </monorail>
+  <activerecord isWeb="true">
+    <config>
+      <add key="connection.driver_class" value="NHibernate.Driver.SQLite20Driver" />
+      <add key="dialect" value="NHibernate.Dialect.SQLiteDialect" />
+      <add key="connection.provider" value="NHibernate.Connection.DriverConnectionProvider" />
+      <add key="connection.connection_string" value="Data Source=App_Data/data.db;Version=3" />
+      <add key="proxyfactory.factory_class" value="NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle" />
+    </config>
+  </activerecord>
+  <system.web>
+    <compilation defaultLanguage="C#" debug="true">
+      <assemblies>
+      </assemblies>
+    </compilation>
+    <customErrors mode="RemoteOnly">
+    </customErrors>
+    <authentication mode="None">
+    </authentication>
+    <authorization>
+      <allow users="*" />
+    </authorization>
+    <httpHandlers>
+      <add verb="*" path="*.castle" type="Castle.MonoRail.Framework.MonoRailHttpHandlerFactory, Castle.MonoRail.Framework" />
+    </httpHandlers>
+    <trace enabled="false" localOnly="true" pageOutput="false" requestLimit="10" traceMode="SortByTime" />
+    <sessionState mode="InProc" cookieless="false" timeout="20" />
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" />
+    <pages>
+    </pages>
+  </system.web>
+</configuration>
