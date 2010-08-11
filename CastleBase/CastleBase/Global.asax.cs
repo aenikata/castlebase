@@ -11,7 +11,8 @@ namespace CastleBase
 		{
 			Castle.ActiveRecord.ActiveRecordStarter.Initialize(typeof(CastleBase.setting).Assembly, Castle.ActiveRecord.Framework.Config.ActiveRecordSectionHandler.Instance);
 			//To create the schema automatically
-			Castle.ActiveRecord.ActiveRecordStarter.CreateSchema();
+			Castle.ActiveRecord.ActiveRecordStarter.UpdateSchema();
+			//Castle.ActiveRecord.ActiveRecordStarter.CreateSchema();
 		}
 		
 		protected virtual void Session_Start(Object sender, EventArgs e)
